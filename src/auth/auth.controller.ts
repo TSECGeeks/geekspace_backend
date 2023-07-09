@@ -23,6 +23,7 @@ export class AuthController {
   async login(@Request() req: any): Promise<any> {
     try {
       //return req.user;
+      this.logger.log(req.user);
       return await this.authService.generateJwtToken(req.user);
     } catch (error) {
       throw error;

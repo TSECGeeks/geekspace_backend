@@ -6,6 +6,9 @@ export class User {
   @Prop()
   userName: string;
 
+  @Prop()
+  role: string;
+
   @Prop({ lowercase: true, unique: true })
   email: string;
 
